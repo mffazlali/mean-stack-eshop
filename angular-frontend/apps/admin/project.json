@@ -9,8 +9,7 @@
             "executor": "@angular-devkit/build-angular:browser",
             "outputs": ["{options.outputPath}"],
             "options": {
-                "baseHref": "/admin/",
-                "outputPath": "../dist/apps/admin",
+                "outputPath": "dist/apps/admin",
                 "index": "apps/admin/src/index.html",
                 "main": "apps/admin/src/main.ts",
                 "polyfills": ["zone.js"],
