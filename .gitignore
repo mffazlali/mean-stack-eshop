@@ -1,0 +1,47 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/angular-frontend/dist
+/angular-frontend/tmp
+/angular-frontend/out-tsc
+
+# dependencies
+/angular-frontend/node_modules
+
+# IDEs and editors
+/angular-frontend/.idea
+/angular-frontend/.project
+/angular-frontend/.classpath
+/angular-frontend/.c9/
+/angular-frontend/*.launch
+/angular-frontend/.settings
+/angular-frontend/*.sublime-workspace
+
+# IDE - VSCode
+/angular-frontend/.vscode/*
+/angular-frontend/!.vscode/settings.json
+/angular-frontend/!.vscode/tasks.json
+/angular-frontend/!.vscode/launch.json
+/angular-frontend/!.vscode/extensions.json
+
+# misc
+/angular-frontend/.sass-cache
+/angular-frontend/connect.lock
+/angular-frontend/coverage
+/angular-frontend/libpeerconnection.log
+/angular-frontend/npm-debug.log
+/angular-frontend/yarn-error.log
+/angular-frontend/testem.log
+/angular-frontend/typings
+
+# System Files
+/angular-frontend/.DS_Store
+/angular-frontend/Thumbs.db
+
+/angular-frontend/.angular
+
+# modejs
+/nodejs-backend/node_modules
+/nodejs-backend/.prettierrc
+/nodejs-backend/.env
+

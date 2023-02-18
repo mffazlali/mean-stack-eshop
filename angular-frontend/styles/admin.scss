@@ -1,0 +1,26 @@
+@import '~normalize.css/normalize.css';
+@import './base/colors.scss';
+@import './base/fonts.scss';
+@import './base/mixins.scss';
+
+// libraries
+@import 'bootstrap/scss/bootstrap.scss';
+@import '~primeicons/primeicons.css';
+@import '~primeng/resources/themes/lara-light-blue/theme.css';
+@import '~primeng/resources/primeng.min.css';
+@import './base/configuration.scss';
+@import '~primeflex/primeflex.css';
+
+// shared
+@import './app/admin/shell.scss';
+@import './app/admin/dashboard.scss';
+
+//pages
+@import './app/shop/pages/home-page.scss';
+@import './app/shop/pages/products-list-page.scss';
+
+//libs
+@import './libs/ui/ui.scss';
+@import './libs/users/users.scss';
+@import './libs/products/products.scss';
+@import './libs/orders/orders.scss';

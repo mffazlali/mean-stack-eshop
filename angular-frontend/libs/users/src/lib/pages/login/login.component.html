@@ -1,0 +1,81 @@
+<div class="login-register">
+    <div class="login-register-panel">
+        <div class="grid">
+            <div class="col-6">
+                <img src="assets/images/login-photo.png" />
+            </div>
+            <div class="col-6 p-5">
+                <h4>Welcome!</h4>
+                <h3>Login Page</h3>
+                <form [formGroup]="loginFormGroup">
+                    <div class="p-fluid grid mt-6">
+                        <div class="col-12">
+                            <label for="email"></label>
+                            <span class="p-input-icon-left">
+                                <i class="pi pi-user"></i>
+                                <input
+                                    id="email"
+                                    type="text"
+                                    formControlName="email"
+                                    pInputText
+                                    placeholder="Email"
+                                />
+                            </span>
+                            <small
+                                *ngIf="
+                                    loginForm['email'].invalid && isSubmitted
+                                "
+                                class="p-error"
+                                ><span
+                                    *ngIf="
+                                        loginForm['email'].errors &&
+                                        loginForm['email'].errors['required']
+                                    "
+                                >
+                                    Email is required
+                                </span>
+                                <span
+                                    *ngIf="
+                                        loginForm['email'].errors &&
+                                        loginForm['email'].errors['email']
+                                    "
+                                >
+                                    Email is invalid
+                                </span>
+                            </small>
+                        </div>
+                        <div class="col-12">
+                            <label for="password"></label>
+                            <span class="p-input-icon-left">
+                                <i class="pi pi-lock"></i>
+                                <input
+                                    id="password"
+                                    type="password"
+                                    formControlName="password"
+                                    pInputText
+                                    placeholder="Password"
+                                />
+                            </span>
+                            <small
+                                *ngIf="
+                                    loginForm['password'].invalid && isSubmitted
+                                "
+                                class="p-error"
+                                >Password is required</small
+                            >
+                        </div>
+                        <div class="col-12">
+                            <p-button
+                                label="Submit"
+                                (onClick)="onSubmit()"
+                            ></p-button>
+                        </div>
+                        <div class="col-12" *ngIf="isSubmitted && authError">
+                            <small class="p-error">{{ authMessage }}</small>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="order-summary mt-2">
+    <h4>order summery</h4>
+    <div class="grid">
+        <div class="col-6 order-summary-names">
+            <div>Items Price</div>
+            <div>Packing & Shipping</div>
+            <div>Total Price</div>
+        </div>
+        <div class="col-6">
+            <div class="order-summary-values">
+                <div>{{ totalPrice | currency }}</div>
+                <div class="free">Free</div>
+                <div>{{ totalPrice | currency }}</div>
+            </div>
+        </div>
+    </div>
+    <div class="order-summary-checkout" *ngIf="!isCheckout">
+        <p-button label="Checkout" (click)="navigateToCheckout()"></p-button>
+    </div>
+</div>

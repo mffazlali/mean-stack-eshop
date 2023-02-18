@@ -1,0 +1,27 @@
+footer {
+    .grid {
+        background-color: #f0e8de;
+        margin: 0 5px;
+        padding: 0;
+        min-height: 90px;
+        justify-content: space-between;
+        align-items: center;
+
+        .copy-right {
+            padding-left: 20px;
+        }
+
+        .icon {
+            text-align: right;
+
+            a {
+                color: var(--surface-700);
+            }
+
+            .pi {
+                margin-right: 10px;
+                font-size: 1.5em;
+            }
+        }
+    }
+}

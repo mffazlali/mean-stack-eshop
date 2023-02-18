@@ -1,0 +1,46 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "command": "npx nx serve ngshop",
+            "name": "run ngshop",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "command": "npx nx serve ngshop --open",
+            "name": "run ngshop open",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "command": "npx nx serve admin",
+            "name": "run admin",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "command": "npx nx serve admin --open",
+            "name": "run admin open",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch ngshop",
+            "url": "http://localhost:4300",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch admin",
+            "url": "http://localhost:4400",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}

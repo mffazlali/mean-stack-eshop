@@ -1,0 +1,31 @@
+.order-summary {
+    background-color: var(--surface-0);
+    padding: 10px;
+
+    h4 {
+        font-weight: 600;
+    }
+
+    div {
+        margin-bottom: 5px;
+    }
+
+    &-values {
+        float: right;
+        width: fit-content;
+
+        &:only-child {
+            font-weight: 600;
+        }
+
+        .free {
+            color: var(--green-700);
+        }
+    }
+
+    &-checkout {
+        button {
+            width: 100%;
+        }
+    }
+}

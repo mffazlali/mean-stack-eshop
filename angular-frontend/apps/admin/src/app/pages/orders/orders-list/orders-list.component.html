@@ -1,0 +1,66 @@
+<div class="admin-page">
+    <p-card header="Orders" subheader="List of all orders">
+        <div class="grid">
+            <div class="col-12">
+                <p-table
+                    [value]="orders"
+                    styleClass="p-datatable-gridlines"
+                    [tableStyle]="{ width: '100%' }"
+                >
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th pSortableColumn="user.name" style="width: 20%">
+                                User <p-sortIcon field="user.name"></p-sortIcon>
+                            </th>
+                            <th pSortableColumn="totalPrice" style="width: 20%">
+                                Total Price
+                                <p-sortIcon field="totalPrice"></p-sortIcon>
+                            </th>
+                            <th
+                                pSortableColumn="dateOrdered"
+                                style="width: 20%"
+                            >
+                                Date Ordered
+                                <p-sortIcon field="dateOrdered"></p-sortIcon>
+                            </th>
+                            <th pSortableColumn="status" style="width: 20%">
+                                status <p-sortIcon field="status"></p-sortIcon>
+                            </th>
+                            <th></th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-order>
+                        <tr>
+                            <td>{{ order.user.name }}</td>
+                            <td>{{ order.totalPrice }}</td>
+                            <td>{{ order.dateOrdered | date : 'short' }}</td>
+                            <td>
+                                <p-tag
+                                    [value]="orderStatus[order.status].label"
+                                    [severity]="orderStatus[order.status].color"
+                                ></p-tag>
+                            </td>
+                            <td>
+                                <p-button
+                                    icon="pi pi-trash"
+                                    styleClass="p-button-danger"
+                                    class="mr-2"
+                                    (click)="deleteOrder(order.id)"
+                                ></p-button>
+                                <p-button
+                                    icon="pi pi-pencil"
+                                    styleClass="p-button-success"
+                                    (click)="showOrder(order.id)"
+                                ></p-button>
+                            </td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div>
+        </div>
+    </p-card>
+</div>
+<p-confirmDialog
+    header="Confirmation"
+    icon="pi pi-exclamation-triangle"
+></p-confirmDialog>

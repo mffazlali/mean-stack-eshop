@@ -1,0 +1,9 @@
+<p-toast></p-toast>
+<i
+    class="pi pi-shopping-cart p-text-secondary"
+    pBadge
+    style="font-size: 1.5rem; cursor: pointer"
+    [value]="cartCount === 0 ? '0' : cartCount"
+    severity="danger"
+    routerLink="cart"
+></i>

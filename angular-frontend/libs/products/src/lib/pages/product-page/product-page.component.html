@@ -1,0 +1,63 @@
+<div class="product-page" *ngIf="product">
+    <div class="grid">
+        <div class="col-6">
+            <ui-gallery [images]="product.images"></ui-gallery>
+        </div>
+        <div class="col-6">
+            <div class="product">
+                <h2 class="product-name">{{ product.name }}</h2>
+                <div class="product-desc">{{ product.description }}</div>
+                <div class="product-rating">
+                    <p-rating
+                        [(ngModel)]="product.rating"
+                        [cancel]="false"
+                        disabled="true"
+                    ></p-rating>
+                </div>
+                <div class="product-price">
+                    {{ product.price | currency }}
+                    <span class="price-before">{{
+                        product.price + 18 | currency
+                    }}</span>
+                </div>
+                <div class="field quantity product-quantity p-0">
+                    <label for="quantity">Quantity</label><br />
+                    <p-inputNumber
+                        [(ngModel)]="quantity"
+                        mode="decimal"
+                        [showButtons]="true"
+                        inputId="quantity"
+                        [min]="0"
+                        [max]="100"
+                    >
+                    </p-inputNumber>
+                </div>
+                <div class="product-action">
+                    <button
+                        pButton
+                        pRipple
+                        type="button"
+                        label="Buy Now"
+                        class="p-button-rounded"
+                    ></button>
+                    <button
+                        pButton
+                        pRipple
+                        type="button"
+                        label="Add to Cart"
+                        class="p-button-rounded ml-3"
+                        (click)="addProductToCart()"
+                    ></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid">
+        <div class="col-12">
+            <div
+                [innerHTML]="product.richDescription"
+                class="product-rich-desc"
+            ></div>
+        </div>
+    </div>
+</div>
