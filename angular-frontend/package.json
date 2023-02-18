@@ -7,8 +7,8 @@
         "start-ngshop": "npx nx serve ngshop",
         "start-admin": "npx nx serve admin",
         "build": "npx nx build",
-        "build-ngshop": "npx nx build ngshop --prod --output-path ../ngshop --base-href /ngshop/",
-        "build-admin": "npx nx build admin --prod --output-path ../admin --base-href /admin/",
+        "build-ngshop": "npx nx build ngshop --prod --output-path docs --base-href /mean-stack-eshop/",
+        "build-admin": "npx nx build admin --prod --output-path ../../dist/apps/admin --base-href /admin/",
         "test": "npx nx test"
     },
     "private": true,
